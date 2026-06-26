@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom"
+import logoPic from "../assets/growthinfi_logo.jpeg"
 import {
     Home,
     Megaphone,
@@ -30,9 +31,11 @@ export default function Sidebar() {
     return (
         <aside className="w-56 shrink-0 bg-white border-r border-stone-200 flex flex-col h-screen sticky top-0">
             <div className="flex items-center gap-2.5 px-5 pt-5 pb-4">
-                <span className="w-7 h-7 rounded-md bg-emerald-800 text-white flex items-center justify-center font-semibold text-sm">
-                    G
-                </span>
+                <img
+                    src={logoPic}
+                    alt="GrowthInfi logo"
+                    className="w-7 h-7 rounded-md object-cover"
+                />
                 <span className="font-semibold text-[15px] tracking-tight text-stone-900">
                     GrowthInfi
                 </span>

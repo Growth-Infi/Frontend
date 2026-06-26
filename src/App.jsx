@@ -1,13 +1,14 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
 import AppLayout from "./pages/AppLayout"
+import Home from "./pages/Home"
+import Campaign from "./pages/Campaign"
+import Settings from "./pages/Settings"
 
-const Home = () => <h1>Home</h1>
-const Campaign = () => <h1>Campaign</h1>
 const EmailVerifier = () => <h1>Email Verifier</h1>
 const IceBreaker = () => <h1>IceBreaker</h1>
 const AiEnrichment = () => <h1>AI Enrichment</h1>
 const FindDomains = () => <h1>Find Domains</h1>
-const Settings = () => <h1>Settings</h1>
+
 
 function App() {
   return (
