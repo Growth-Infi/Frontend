@@ -60,11 +60,11 @@ export default function Campaign() {
                                 <td className="px-5 py-3.5 text-stone-600">{c.sent.toLocaleString()}</td>
                                 <td className="px-5 py-3.5 text-stone-600">{c.replies}</td>
                                 <td className="px-5 py-3.5 text-stone-500">{c.updated}</td>
-                                <td className="px-5 py-3.5 text-right">
+                                {/* <td className="px-5 py-3.5 text-right">
                                     <button onClick={(e) => e.stopPropagation()} className="text-stone-400 hover:text-stone-700 p-1 rounded">
                                         <MoreHorizontal size={16} />
                                     </button>
-                                </td>
+                                </td> */}
                             </tr>
                         ))}
                     </tbody>
