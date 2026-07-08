@@ -330,6 +330,13 @@ export default function CampaignDetail() {
     const [activeTab, setActiveTab] = useState("Sequence")
     const [status, setStatus] = useState("Active")
 
+    const defaultName = isNew
+        ? `New campaign — ${new Date().toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}`
+        : "Test"
+
+    const [name, setName] = useState(defaultName)
+    const [editing, setEditing] = useState(false)
+
     const tabContent = {
         Sequence: <SequenceTab />,
         "Sender Accounts": <SenderAccountsTab />,
@@ -346,9 +353,26 @@ export default function CampaignDetail() {
                 >
                     <ArrowLeft size={18} />
                 </button>
-                <h1 className="text-xl font-semibold text-stone-900 flex-1">
-                    {isNew ? "New campaign" : "Q3 SaaS Founders Outreach"}
-                </h1>
+
+                {editing ? (
+                    <input
+                        autoFocus
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        onBlur={() => setEditing(false)}
+                        onKeyDown={(e) => e.key === "Enter" && setEditing(false)}
+                        className="flex-1 text-xl font-semibold text-stone-900 bg-transparent border-b border-blue-400 outline-none pb-0.5"
+                    />
+                ) : (
+                    <h1
+                        onClick={() => setEditing(true)}
+                        className="flex-1 text-xl font-semibold text-stone-900 cursor-text hover:text-stone-600 transition-colors"
+                        title="Click to rename"
+                    >
+                        {name}
+                    </h1>
+                )}
+
                 {!isNew && (
                     <button
                         onClick={() => setStatus((s) => s === "Active" ? "Paused" : "Active")}

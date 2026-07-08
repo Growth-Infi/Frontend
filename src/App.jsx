@@ -4,12 +4,11 @@ import Home from "./pages/Home"
 import Campaign from "./pages/Campaign"
 import Settings from "./pages/Settings"
 import CampaignDetail from "./pages/CampaignDetails"
+import IceBreaker from "./pages/IceBreaker"
+import AiEnrichment from "./pages/AiEnrichment"
+import FindDomains from "./pages/FindDomains"
 
 const EmailVerifier = () => <h1>Email Verifier</h1>
-const IceBreaker = () => <h1>IceBreaker</h1>
-const AiEnrichment = () => <h1>AI Enrichment</h1>
-const FindDomains = () => <h1>Find Domains</h1>
-
 
 function App() {
   return (
